@@ -1,4 +1,4 @@
-# 과제 진행상황
+# hary django 과제 진행상황
 
 ## 1. Models
 
