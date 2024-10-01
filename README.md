@@ -12,7 +12,13 @@
 - [x] 코드작성
 - [x] 테스트
 
-## 2. Power Admin
+## 3. Power Admin
+
+- [x] 요구조건 확인
+- [x] 코드작성
+- [x] 테스트
+
+## 4. Urls, Views and Templates
 
 - [x] 요구조건 확인
 - [x] 코드작성
