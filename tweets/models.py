@@ -5,32 +5,35 @@ from common.models import CommonModel
 
 
 # Create your models here.
+
+
 class Tweet(CommonModel):
-    # payload: Text(max. lenght 180
-    payload = models.CharField(
-        max_length=180,
-    )
-    users = models.ForeignKey(
+    """Tweet Model Definition"""
+
+    payload = models.CharField(max_length=180)
+    user = models.ForeignKey(
         "users.User",
         on_delete=models.CASCADE,
         related_name="tweets",
     )
 
-    def Like_Count(self):
-        return self.likes.count()
-
     def __str__(self):
         return self.payload
 
+    def like_count(self):
+        return self.likes.count()
+
 
 class Like(CommonModel):
-    tweet = models.ForeignKey(
-        "tweets.Tweet",
+    """Like Model Definition"""
+
+    user = models.ForeignKey(
+        "users.User",
         on_delete=models.CASCADE,
         related_name="likes",
     )
-    user = models.ForeignKey(
-        "users.User",
+    tweet = models.ForeignKey(
+        "tweets.Tweet",
         on_delete=models.CASCADE,
         related_name="likes",
     )
