@@ -33,6 +33,7 @@ CUSTOM_APPS = [
     "users.apps.UsersConfig",
     "common.apps.CommonConfig",
     "tweets.apps.TweetsConfig",
+    "rest_framework",
 ]
 
 

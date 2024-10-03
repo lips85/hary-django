@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.see_all_tweets),
+    path("tweets", views.see_all_tweets),
+    path("users/<str:user>/tweets", views.user_tweets),
 ]
