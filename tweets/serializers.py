@@ -1,7 +1,9 @@
 from rest_framework import serializers
+from .models import Tweet
 
 
-class TweetSerializer(serializers.Serializer):
-    pk = serializers.IntegerField(read_only=True)
-    payload = serializers.CharField(max_length=180, required=True)
-    user = serializers.CharField(max_length=180)
+class TweetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tweet
+        fields = ("id", "payload")
+        pk_field = "id"
