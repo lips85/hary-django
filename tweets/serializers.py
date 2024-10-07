@@ -5,5 +5,5 @@ from .models import Tweet
 class TweetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tweet
-        fields = ("id", "payload")
+        fields = "__all__"
         pk_field = "id"
