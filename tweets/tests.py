@@ -53,7 +53,7 @@ class Tweets_All_Test(APITestCase):
         print("=============================")
 
     def test_post_new_tweet(self):
-        print("=============================")
+        print("\n=============================")
         print("ALL Tweets API POST확인 ")
         new_tweet = {"payload": "New tweet", "user": self.user.id}
         response = self.client.post(self.Test_URL, new_tweet, format="json")
@@ -97,7 +97,7 @@ class Tweets_Detail_Test(APITestCase):
     def test_1_get_tweets_detail(self):
         response = self.client.get(self.Test_URL_Valid)
         data = response.json()
-        print("=============================")
+        print("\n=============================")
         print("Tweets Detail API GET확인(Valid URL) ")
 
         # HTTP 응답
@@ -125,7 +125,7 @@ class Tweets_Detail_Test(APITestCase):
         print("=============================")
 
     def test_2_tweet_not_found(self):
-        print("=============================")
+        print("\n=============================")
         print("Tweets Detail API GET확인(Invalid URL) ")
         response = self.client.get(self.Test_URL_Invalid)
 
@@ -138,7 +138,7 @@ class Tweets_Detail_Test(APITestCase):
         print("=============================")
 
     def test_3_put_tweet(self):
-        print("=============================")
+        print("\n=============================")
         print("Tweets Detail API PUT확인 ")
         change_tweet = {"payload": self.Change_payload}
         response = self.client.put(self.Test_URL_Valid, change_tweet, format="json")
@@ -160,7 +160,7 @@ class Tweets_Detail_Test(APITestCase):
         print("=============================")
 
     def test_4_delete_tweet(self):
-        print("=============================")
+        print("\n=============================")
         print("Tweets Detail API DELETE확인 ")
 
         response = self.client.delete(self.Test_URL_Valid)
